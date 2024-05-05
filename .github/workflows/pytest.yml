@@ -58,6 +58,8 @@ jobs:
     - name: Pytest coverage comment
       uses: MishaKav/pytest-coverage-comment@main     
       with:
+          coverage-path-prefix: backend/
+          title: Backend Coverage Report
           pytest-coverage-path: ./backend/pytest-coverage.txt
           junitxml-path: ./backend/pytest.xml  
 
@@ -106,6 +108,8 @@ jobs:
     - name: Pytest coverage comment
       uses: MishaKav/pytest-coverage-comment@main     
       with:
+          coverage-path-prefix: frontend/
+          title: Frontend Coverage Report
           pytest-coverage-path: ./frontend/pytest-coverage.txt
           junitxml-path: ./frontend/pytest.xml   
 
