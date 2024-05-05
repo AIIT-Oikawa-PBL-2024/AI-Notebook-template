@@ -74,7 +74,8 @@ copilot-practice2
 
 ## 作成方法
 - `git clone`でリポジトリをダウンロード
-- ルートディレクトリにある`.env.sample`ファイルをコピーして、`.env`ファイルを作成
+- ルートディレクトリにある`.env.sample`ファイルをコピーして、`.env`ファイルを作成<br>
+   設定は変更せず、passwordはブランクのままにしてください。
 - `$ docker compose build --no-cache`でDockerイメージをビルド
 - パッケージ管理はpoetryを使用<br>
 　backendとfrontendのそれぞれの定義ファイルからインストール<br>
@@ -133,8 +134,9 @@ https://github.com/github/gitignore/blob/main/Python.gitignore
 - GitHub ActionsのCI実行
    - 実行ファイル
       `.github/workflows/pytest.yml`<br>
-      😢表示されるパスがbackendディレクトリ、frontendディレクトリからになってしまうため、リンクが飛ばない。
-      <br>（ルートディレクトリからにできない😭）
+      `backend`, `frontend`で処理を分けています。
+      `coverage-path-prefix`を設定することで、リンクのパスに飛ぶようになりました。
+
 
    - GitHub Actionsの処理について
       参考ページ
