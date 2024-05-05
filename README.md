@@ -120,6 +120,11 @@ https://github.com/github/gitignore/blob/main/Python.gitignore
 - .coderabbit.yamlファイル<br>
 コードラビットの設定ファイル
 
+- .vscode/settings.json<br>
+リンター、フォーマッターとしてruffを設定<br>
+`pyproject.tomlにも[tool.ruff]を設定済み`<br>
+⭐️poetryのパッケージにruffを追加したが反映されず、
+私の場合、VSCodeの拡張機能でもruffをインストール
 
 ## テストの実行
 - Dev Containerでの実行
